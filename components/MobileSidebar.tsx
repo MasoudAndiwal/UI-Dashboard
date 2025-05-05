@@ -1,42 +1,46 @@
-import { SidebarComponent } from "@syncfusion/ej2-react-navigations"
+import  { SidebarComponent } from "@syncfusion/ej2-react-navigations"
 import NavItems from "./navitem";
 import { Link } from "react-router";
 
-
-{/* @ts-ignore */}
-
-const mobileSidebar = () => {
-    let sidebar : SidebarComponent; 
-    const toggleSidebar = ()=>{
-        sidebar.toggle()
-    }
-   return(
+const MobileSidebar = () => {
+  let sidebar: SidebarComponent;
+  const toggleSidebar = () => {
+    sidebar.toggle()
+  }
+  
+  return (
     <div className="mobile-sidebar wrapper">
-        
-        <header>
-           <Link to="/">
-           <img src="/assets/icon/logo.svg" alt="logo"
-           className="size-[30px]" />
-           <h1>Tourvisto</h1>
-          <NavItems handleClick={toggleSidebar} />
-          </Link>
-           
-            <button onClick={()=> sidebar.toggle()}></button> 
-           <img src="/assets/icons/menu.svg" alt="menu" className="size-7" />
-        </header>
+      <header>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/assets/icon/logo.svg" 
+            alt="logo"
+            className="size-[30px]" 
+          />
+          <h1 className="ml-2">Tourvisto</h1>
+        </Link>
+          
+        <button onClick={toggleSidebar}>
+          <img 
+            src="/assets/icons/menu.svg" 
+            alt="menu" 
+            className="size-7" 
+          />
+        </button>
+      </header>
 
-            <SidebarComponent
-            width="270px"
-            ref={(instance: SidebarComponent) => { sidebar = instance; }}
-            created={() => sidebar.hide()}
-            closeOnDocumentClick={true}
-            showBackdrop={true}
-            type="Over"
-            >
-                <NavItems handleClick={toggleSidebar} />
-                
-                </SidebarComponent>
+      <SidebarComponent
+        width="270px"
+        ref={(Sidebar: SidebarComponent) => { sidebar = Sidebar }}
+        created={() => sidebar.hide()}
+        closeOnDocumentClick={true}
+        showBackdrop={true}
+        type="Over"
+      >
+        <NavItems handleClick={toggleSidebar} />
+      </SidebarComponent>
     </div>
-   )
+  )
 }
-export default mobileSidebar
+
+export default MobileSidebar;

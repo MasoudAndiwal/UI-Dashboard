@@ -295,9 +295,7 @@
       p {
         @apply text-gray-100 text-xs md:text-sm font-normal truncate;
       }
-      button {
-        @apply text-sm md:text-base font-semibold text-dark-100 bg-light-200 py-2 px-4 rounded-lg;
-      }
+     
     }
   }
   .mobile-sidebar {

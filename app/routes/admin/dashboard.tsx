@@ -1,14 +1,12 @@
-import { Outlet } from "react-router"; 
+import { Outlet } from "react-router";
 
-const dashboard = () => {
-    return(
+const Dashboard = () => {
+    return (
         <>
             <div>Dashboard</div>
-
-            <aside className="children ">
-                    <Outlet />
-        </aside>
+            <Outlet /> {/* Render nested routes here */}
         </>
-    )
-}
-export default dashboard;
+    );
+};
+
+export default Dashboard;

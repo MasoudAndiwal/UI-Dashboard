@@ -1,8 +1,6 @@
 const AllUsers = () => {
     return(
-        <div>
-            All Users
-        </div>
+        <div className="container">All Users</div>
     )
 }
 export default AllUsers 
