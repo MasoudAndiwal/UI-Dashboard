@@ -5,7 +5,7 @@ const AllUsers = () => {
         <main className="dashboard wrapper">
             <Header 
                 title="All Users"
-                description="Check out our current users , in real time"
+                description={`Check out our current users , in real time`}
             />
 
            Page contents 
