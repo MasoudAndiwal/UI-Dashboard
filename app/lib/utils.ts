@@ -1,3 +1,4 @@
+// Ensure the 'dayjs' module is installed by running: npm install dayjs
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import dayjs from "dayjs";

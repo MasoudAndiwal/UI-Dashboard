@@ -1,16 +1,18 @@
-import { Outlet } from "react-router"
-
+import { MobileSidebar, NavItems } from "components";
+import {SidebarComponent} from '@syncfusion/ej2-react-navigations';
+import {Outlet} from 'react-router';
 const AdminLayout = () => {
     return (
         <div className="admin-layout">
-            mobileSidebar   <br />
+            <MobileSidebar />   
 
-            <aside className="W-full max-w-[270px] hidden lg:block">
-                Sidebar
+            <aside className="w-full max-w-[270px] hidden lg:block">
+                <SidebarComponent width={270} enableGestures={false} >
+                    <NavItems />
+                </SidebarComponent>
             </aside>
-
-            {/* ⬇️ اینجا باید باشه تا dashboard یا سایر routeهای فرزند نمایش داده بشن */}
-            <main className="flex-1">
+            <main className="children">   
+                <p>Admin layout</p>
                 <Outlet />
             </main>
         </div>

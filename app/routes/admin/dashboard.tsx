@@ -1,4 +1,4 @@
-import { Outlet } from "react-router"; // یا "react-router-dom" بسته به پروژه‌ات
+import { Outlet } from "react-router"; 
 
 const dashboard = () => {
     return(
@@ -6,8 +6,7 @@ const dashboard = () => {
             <div>Dashboard</div>
 
             <aside className="children ">
-                <br />
-            <Outlet />
+                    <Outlet />
         </aside>
         </>
     )

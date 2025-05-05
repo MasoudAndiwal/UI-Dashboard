@@ -184,7 +184,7 @@
       @apply flex flex-col gap-9 mt-2.5;
 
       header {
-        @apply flex flex-col gap-6 overflow-hidden;
+        @apply flex flex-col gap-6 ;
 
         div {
           @apply flex items-center gap-5;
@@ -283,9 +283,9 @@
     }
   }
   .nav-footer {
-    @apply flex items-center gap-2.5 pb-8;
+    @apply flex items-center gap-2.5 pb-8  ;
     img {
-      @apply size-10 rounded-full aspect-square;
+      @apply size-10 rounded-full aspect-square 
     }
     article {
       @apply flex flex-col gap-[2px] max-w-[115px];
@@ -294,6 +294,9 @@
       }
       p {
         @apply text-gray-100 text-xs md:text-sm font-normal truncate;
+      }
+      button {
+        @apply text-sm md:text-base font-semibold text-dark-100 bg-light-200 py-2 px-4 rounded-lg;
       }
     }
   }
@@ -346,7 +349,7 @@
     }
   }
   .nav-items {
-    @apply flex flex-col px-6 h-full;
+    @apply flex flex-col px-6 h-full  ;
     .container {
       @apply flex flex-col justify-between h-full;
       nav {

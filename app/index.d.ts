@@ -20,7 +20,8 @@ declare interface Country {
   openStreetMap?: string;
 }
 
-declare interface DropdownItem {http://localhost:5173/
+declare interface DropdownItem {
+  http://localhost:5173/ 
   name: string ;
 }
 
