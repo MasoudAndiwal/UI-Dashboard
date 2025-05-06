@@ -1,17 +1,8 @@
 import { StatsCard, TripCard } from "components";
 import Header from "components/Header";
 import { Outlet } from "react-router";
-
+import { DashboardStats, user, allTrips , users } from "~/constants";
 const Dashboard = () => {
-    const user = { name: "Admin" }; // Replace with actual user data
-    const DashboardStats = {
-        totalusers : 12450 ,
-        userJoined : { currentMonth : 218 , lastMonth : 176} , 
-        totalTrips : 3210 , 
-        tripCreated : {currentMonth : 150 , lastMonth :  250 },
-        userRole : {total : 62 , currentMonth : 25 , lastMonth :15 },
-
-    }
     const {totalusers , userJoined , totalTrips , tripCreated , userRole} = DashboardStats;
 
     return (
@@ -43,7 +34,23 @@ const Dashboard = () => {
                 />
                 </div>
             </section>
-        
+            <section className="container">
+                <h1 className="text-xl font-semibold text-dark-100"> Created Trips</h1>
+                <div className="trip-grid">
+                    {allTrips.slice(0, 4).map(({ id, name, imageUrls, itinerary, tags, travelStyle, estimatedPrice }) => (
+                        <TripCard
+                            key={id}
+                            id={id.toString()}
+                            name={name}
+                            imageUrls={imageUrls || []} // Ensure imageUrls is at least an empty array
+                            itinerary={itinerary}
+                            tags={tags}
+                            travelStyle={travelStyle}
+                            estimatedPrice={estimatedPrice}
+                        />
+                    ))}
+                </div>
+            </section>
         </main>
        );
 };
